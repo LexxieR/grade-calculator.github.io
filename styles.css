@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -16,20 +16,6 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
 }
 
 main {
@@ -50,18 +36,19 @@ footer {
     width: 100%;
 }
 
-form {
-    margin-top: 20px;
-}
 
 input, textarea {
-    width: 100%;
+    width: 20%;
     padding: 10px;
-    margin: 5px 0;
+    margin: 5px 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+input[type = button]:hover{
+    background-color: #e6e6e6;
+    cursor: pointer;
+  
+}
 button {
     background-color: #333;
     color: white;
@@ -72,69 +59,5 @@ button {
 }
 
 button:hover {
-    background-color: #555;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-        text-align: center;
-    }
-    input, textarea {
-        width: 100%;
-    }
-}
-
-/* Dropdown Styling */
-.dropdown {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to the parent <li> */
-    top: 100%; /* Aligns dropdown below the parent <li> */
-    left: 0; /* Aligns dropdown to the left edge of the parent <li> */
-    background-color: #333;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 10; /* Ensures dropdown is above other elements */
-}
-
-.dropdown li {
-    margin: 0;
-}
-
-.dropdown a {
-    display: block;
-    padding: 8px 15px;
-    color: white;
-    text-decoration: none;
-}
-
-.menu {
-    background-color: #333333;
-    padding: 10px 20px;
-    text-align: middle; /* Aligns the entire menu to the left */
-}
-
-.menu li {
-    position: relative; /* Make the parent <li> the positioning context */
-}
-
-.menu li:hover > .dropdown {
-    display: block; /* Show dropdown on hover */
-}
-
-.languages {
-    background-color: #333333;
-    /*padding: 10px 20px;*/
-    text-align: right; /* Aligns the entire menu to the left */
-}
-
-.languages li {
-    position: relative; /* Make the parent <li> the positioning context */
-}
-
-.languages a.active {
-    /*font-weight: bold;*/
-    background-color: #494949;
-    /*text-decoration: underline;*/
+    background-color: #a00000;
 }

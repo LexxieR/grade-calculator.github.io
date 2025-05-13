@@ -4,50 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Simple Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="header.js" defer></script> 
+
+    <title>Grade Calculator</title>
+    <!-- link for font  -->
+
 </head>
 <body>
-
-    <div id="header"></div>
-
-    <main>
-        <section id="home">
-            <h2 data-translate="homeTitle"></h2>
-            <p data-translate="homeContent"></p>
-        </section>
-
-        <section id="about">
-            <h2 data-translate="aboutTitle"></h2>
-            <p data-translate="aboutContent"></p>
-        </section>
-
-        <section id="contact">
-            <h2 data-translate="contactTitle"></h2>
-            <form id="contactForm">
-                <label data-translate="nameLabel">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br><br>
-
-                <label data-translate="emailLabel">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br><br>
-
-                <label data-translate="messageLabel">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <br><br>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <span>&nbsp;</span>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Simple Website</p>
-    </footer>
-
-    <script src="script.js"></script>
+ <!-- main html  -->
+ <div class="container">
+    <h1>Student grade calculator</h1>
+    <div >
+        <div>
+                <!-- option for taking the input -->
+            <input type="text" placeholder="Chemistry" id="" />
+            <input type="text" placeholder="Weight" id="weight1" />
+            <input type="text" placeholder="Grade" id="grade1" />
+        </div>
+        <div>
+            <input type="text" placeholder="English" id="" /></input>
+            <input type="text" placeholder="Weight" id="weight2" />
+            <input type="text" placeholder="Grade" id="grade2" />
+        </div>
+        <div>
+            <input type="text" placeholder="Math" id="" />
+            <input type="text" placeholder="Weight" id="weight3" />
+            <input type="text" placeholder="Grade" id="grade3" />
+        </div>
+        <div>
+            <input type="text" placeholder="Physics" id="" />
+            <input type="text" placeholder="Weight" id="weight4" />
+            <input type="text" placeholder="Grade" id="grade4" />
+        </div>
+        <div>
+            <input type="button" 
+                    value="show Percentage" 
+                    onclick="calculate()" />
+        </div>
+    </div>
+    <!-- for showing the result-->
+    <div class="form-group showdata">
+        <p id="showdata"></p>
+    </div>
+</div>
+<!--adding external javascript file-->
+<script src="script.js"></script>
 </body>
 </html>
