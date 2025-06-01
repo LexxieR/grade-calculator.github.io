@@ -13,52 +13,54 @@
 <body>
  <!-- main html  -->
  <div class="container">
-    <h1>Student grade calculator</h1>
-    <div class="table-container">
-    <div id="input-container" >
-        
-        <div class="row">
-                <!-- option for taking the input -->
-            <input type="text" placeholder="Chemistry" id="" />
-            <input type="text" placeholder="Grade" id="grade0" />
-            <input type="text" placeholder="Weight" id="weight0" />
-            
-            </div>
-        <div class="row">
-            <input type="text" placeholder="English" id="" /></input>
-            <input type="text" placeholder="Grade" id="grade1" />
-            <input type="text" placeholder="Weight" id="weight1" />
-            
-        </div>
-        <div class="row">
-            <input type="text" placeholder="Math" id="" />
-            <input type="text" placeholder="Grade" id="grade2" />
-            <input type="text" placeholder="Weight" id="weight2" />
-            
-        </div>
-        <div class="row">
-            <input type="text" placeholder="Physics" id="" />
-            <input type="text" placeholder="Grade" id="grade3" />
-            <input type="text" placeholder="Weight" id="weight3" />
-            
-        </div>
-    </div> 
-    <!-- <button onclick="addRow()" >Add Row</button> -->
-    <div  class = "addButton">
-    <input type="button"
-                    value="Add Row" 
-                    onclick="addRow()" ></div>
-                    
-    </div>
 
-    <input type="button" 
-                    value="Show Percentage" 
-                    onclick="calculate()" >
-    <!-- for showing the result-->
-    <div class="form-group showdata">
-        <p id="showdata"></p>
-    </div>
-</div>
+    <h1>Student grade calculator</h1>
+
+    <div class="table-container">
+        <div id="input-container" >
+            <div class="row">
+                    <!-- option for taking the input -->
+                <input type="text" placeholder="Chemistry" id="" />
+                <input type="text" placeholder="Grade" id="grade0" />
+                <input type="text" placeholder="Weight" id="weight0" />
+                
+            </div>
+            <div class="row">
+                <input type="text" placeholder="English" id="" /></input>
+                <input type="text" placeholder="Grade" id="grade1" />
+                <input type="text" placeholder="Weight" id="weight1" />
+                
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Math" id="" />
+                <input type="text" placeholder="Grade" id="grade2" />
+                <input type="text" placeholder="Weight" id="weight2" />
+                
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Physics" id="" />
+                <input type="text" placeholder="Grade" id="grade3" />
+                <input type="text" placeholder="Weight" id="weight3" />
+                
+            </div>
+        </div> <!-- End of <div id="input-container" > -->
+    <!-- <button onclick="addRow()" >Add Row</button> -->
+        <div  class = "addButton">
+            <input type="button" value="Add Row" onclick="addRow()" >
+        </div>             
+    </div> <!-- End of <div id="table-container" > -->
+
+    <div class="results">
+        <div class="resultsButton">
+            <input type="button" value="Show Percentage" onclick="calculate()" >
+        </div>
+        <!-- for showing the result-->
+        <div class=" showdata">
+            <p id="showdata"></p>
+        </div>
+    </div> <!-- End of <div class="results"> -->
+</div> <!-- End of <div class="container"> -->
+    
 <!--adding external javascript file-->
 <script src="script.js"></script>
 </body>
