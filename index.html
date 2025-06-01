@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <script src="header.js" defer></script> 
 
     <title>Grade Calculator</title>
     <!-- link for font  -->
@@ -15,34 +14,46 @@
  <!-- main html  -->
  <div class="container">
     <h1>Student grade calculator</h1>
-    <div >
-        <div>
+    <div class="table-container">
+    <div id="input-container" >
+        
+        <div class="row">
                 <!-- option for taking the input -->
             <input type="text" placeholder="Chemistry" id="" />
-            <input type="text" placeholder="Weight" id="weight1" />
-            <input type="text" placeholder="Grade" id="grade1" />
-        </div>
-        <div>
+            <input type="text" placeholder="Grade" id="grade0" />
+            <input type="text" placeholder="Weight" id="weight0" />
+            
+            </div>
+        <div class="row">
             <input type="text" placeholder="English" id="" /></input>
-            <input type="text" placeholder="Weight" id="weight2" />
-            <input type="text" placeholder="Grade" id="grade2" />
+            <input type="text" placeholder="Grade" id="grade1" />
+            <input type="text" placeholder="Weight" id="weight1" />
+            
         </div>
-        <div>
+        <div class="row">
             <input type="text" placeholder="Math" id="" />
-            <input type="text" placeholder="Weight" id="weight3" />
-            <input type="text" placeholder="Grade" id="grade3" />
+            <input type="text" placeholder="Grade" id="grade2" />
+            <input type="text" placeholder="Weight" id="weight2" />
+            
         </div>
-        <div>
+        <div class="row">
             <input type="text" placeholder="Physics" id="" />
-            <input type="text" placeholder="Weight" id="weight4" />
-            <input type="text" placeholder="Grade" id="grade4" />
+            <input type="text" placeholder="Grade" id="grade3" />
+            <input type="text" placeholder="Weight" id="weight3" />
+            
         </div>
-        <div>
-            <input type="button" 
-                    value="show Percentage" 
-                    onclick="calculate()" />
-        </div>
+    </div> 
+    <!-- <button onclick="addRow()" >Add Row</button> -->
+    <div  class = "addButton">
+    <input type="button"
+                    value="Add Row" 
+                    onclick="addRow()" ></div>
+                    
     </div>
+
+    <input type="button" 
+                    value="Show Percentage" 
+                    onclick="calculate()" >
     <!-- for showing the result-->
     <div class="form-group showdata">
         <p id="showdata"></p>

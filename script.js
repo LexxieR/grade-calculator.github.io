@@ -1,27 +1,63 @@
+let lengrades = 4; // Stating number of rows
+let grade = [];
+let weight = [];
+let extra = 0;
+
+function addRow(){
+
+    const container = document.getElementById("input-container");
+
+    const newRow = document.createElement("div");
+    newRow.className = "row";
+
+    newRow.innerHTML = `
+        <input type="text" placeholder="Course" />
+        <input type="text" placeholder="Grade" id="grade${lengrades}" />
+        <input type="text" placeholder="Weight" id="weight${lengrades}" />
+        
+      `;
+    
+    container.appendChild(newRow); // Appends at the end of the container
+    
+    lengrades++;
+}
 // Function for calculating grade
 function avgcalc(){
-    let grade1 = parseFloat(document.querySelector("#grade1").value);
-    let grade2 = parseFloat(document.querySelector("#grade2").value);
-    let grade3 = parseFloat(document.querySelector("#grade3").value);
-    let grade4 = parseFloat(document.querySelector("#grade4").value);
-    let weight1 = parseFloat(document.querySelector("#weight1").value);
-    let weight2 = parseFloat(document.querySelector("#weight2").value);
-    let weight3 = parseFloat(document.querySelector("#weight3").value);
-    let weight4 = parseFloat(document.querySelector("#weight4").value);
+    grade = []
+    weight = []
+    let numerator = 0
+    let denominator = 0
     
-    totweight = weight1 + weight2 + weight3 + weight4;
-    return (grade1 * weight1 + grade2 * weight2 + grade3 * weight3 + grade4 * weight4)/totweight;
+    for (let i = 0; i < lengrades; i++){
+        let CurGrade = parseFloat(document.querySelector(`#grade${i}`).value)
+        let CurWeight = parseFloat(document.querySelector(`#weight${i}`).value)
+    
+        if (isNaN(CurGrade) && isNaN(CurWeight)){
+            continue;
+        }
+
+        grade.push(CurGrade);
+        console.log(grade);
+
+        weight.push(CurWeight);
+        console.log(weight);
+
+        numerator += weight[i] * grade[i]
+        denominator += weight[i]
+
+    }
+
+    return numerator/denominator
 }
 
 function calculate(){
 
     // Getting input from user into height variable.
-    let grade1 = document.querySelector("#grade1").value;
-    let grade2 = document.querySelector("#grade2").value;
-    let grade3 = document.querySelector("#grade3").value;
-    let grade4 = document.querySelector("#grade4").value;
-    let grade = "";
-
+    let grade1 = document.querySelector("#grade0").value;
+    let grade2 = document.querySelector("#grade1").value;
+    let grade3 = document.querySelector("#grade2").value;
+    let grade4 = document.querySelector("#grade3").value;
+    
     // Checking the condition for the providing the 
     // grade to student based on percentage
     
