@@ -81,9 +81,15 @@ input[type = button]:hover{
 }
 
 .addButton {
-    display: inline;
-    margin: 5px
     
+    display: flex;
+    justify-content: center;
+    
+}
+
+.addButton input[type="button"] {
+    width: 100%;
+    max-width: 250px; /* control maximum size */
 }
 .resultsButton {
     
@@ -116,6 +122,10 @@ input[type = button]:hover{
    
     border-radius: 10px;
     
+}
+
+.showdata {
+    color:white;
 }
 
 
